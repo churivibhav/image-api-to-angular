@@ -1,0 +1,9 @@
+<p>Hi</p>
+<input #file type="file" multiple (change)="upload(file.files)" />
+<br/>
+<span style="font-weight: bold" *ngIf="progress > 0 && progress < 100">
+  {{progress}} %
+</span>
+<span style="font-weight: bold" *ngIf="message">
+  {{message}}
+</span>
