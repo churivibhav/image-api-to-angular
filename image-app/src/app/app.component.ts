@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'image-app';
+  imageid: string;
+
+  onInit() {
+    this.imageid = localStorage.getItem("image");
+  }
+
+  onNotify(message: string) {
+    alert(message);
+    this.imageid = message;
+    localStorage.setItem("image", this.imageid);
+  }
 }
